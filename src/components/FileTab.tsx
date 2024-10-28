@@ -31,6 +31,11 @@ const FileTab = ({file}: IProps) => {
         const lastFile = UpdateOpendFiles[UpdateOpendFiles.length - 1]
         if(lastFile == undefined) {
             dispatch(setOpendFilesAction([]))
+            dispatch(setClickedFileAction({
+                fileContent: "",
+                fileName: "",
+                id: ""
+            }))
             return
         }
         dispatch(setClickedFileAction({
